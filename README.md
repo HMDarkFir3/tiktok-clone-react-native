@@ -35,10 +35,10 @@ Para clonar e executar este aplicativo, você precisará de [Git](https://git-sc
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/HMDarkFir3/TikTokClone.git
+$ git clone https://github.com/HMDarkFir3/TikTokClone_ReactNative.git
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd TikTokClone
+$ cd TikTokClone_ReactNative
 ```
 
 ### 🎲 Rodando a Aplicação
@@ -61,10 +61,12 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Expo](https://docs.expo.io)
 - [React Navigation](https://reactnavigation.org)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [AWS Amplify](https://docs.amplify.aws/start/q/integration/react-native)
-- [AWS Amplify Auth](https://docs.amplify.aws/start/getting-started/auth/q/integration/react-native)
+- [AWS Amplify API](https://docs.amplify.aws/start/getting-started/data-model/q/integration/react-native)
+- [AWS Amplify Authentication](https://docs.amplify.aws/start/getting-started/auth/q/integration/react-native)
+- [AWS Amplify S3](https://docs.amplify.aws/lib/storage/getting-started/q/platform/js)
 - [expo-av](https://docs.expo.io/versions/latest/sdk/video/)
 - [expo-camera](https://docs.expo.io/versions/latest/sdk/camera/)
+- [uuid](https://github.com/uuidjs/uuid)
 
 
 ---
