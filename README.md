@@ -48,7 +48,7 @@ $ cd TikTokClone
 $ yarn install
 
 # Execute a Aplicação em Desenvolvimento
-$ yarn android
+$ expo start
 ```
 
 ---
