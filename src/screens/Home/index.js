@@ -5,9 +5,6 @@ import { SafeAreaView, FlatList, Dimensions } from "react-native";
 //Component
 import Post from "../../components/Post";
 
-//Style
-import { styles } from "./styles";
-
 //Amplify
 import { API, graphqlOperation } from "aws-amplify";
 
@@ -16,6 +13,9 @@ import { listPosts } from "../../graphql/queries";
 
 //Data
 //import posts from "../../../data/posts";
+
+//Style
+import { styles } from "./styles";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

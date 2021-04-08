@@ -1,5 +1,5 @@
 //React
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   View,
   Text,
@@ -8,8 +8,11 @@ import {
   Image,
 } from "react-native";
 
-//Expo Video
+//Expo
 import { Video, AVPlaybackStatus } from "expo-av";
+
+//Amplify
+import { Storage } from "aws-amplify";
 
 //Style
 import { styles } from "./styles";
@@ -21,8 +24,13 @@ export default function Post(props) {
   const [post, setPost] = useState(props.post);
   const [isLiked, setIsLiked] = useState(false);
   const [paused, setPaused] = useState(true);
+  const [videoUri, setVideoUri] = useState(null);
 
   const video = useRef(null);
+
+  useEffect(() => {
+    getVideoUri();
+  }, []);
 
   function onLikePress() {
     const likesToAdd = isLiked ? -1 : +1;
@@ -33,6 +41,15 @@ export default function Post(props) {
     });
 
     setIsLiked(!isLiked);
+  }
+
+  async function getVideoUri() {
+    if (post.videoUri.startsWith("http")) {
+      setVideoUri(post.videoUri);
+      return;
+    }
+
+    setVideoUri(await Storage.get(post.videoUri));
   }
 
   return (
@@ -48,11 +65,11 @@ export default function Post(props) {
           <Video
             ref={video}
             style={styles.video}
-            source={{ uri: post.videoUri }}
+            source={{ uri: videoUri }}
             onError={(e) => console.log(e)}
             resizeMode="cover"
             isLooping={true}
-            shouldPlay={true}
+            shouldPlay={false}
             onPlaybackStatusUpdate={(paused) => setPaused(() => paused)}
           />
 
