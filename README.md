@@ -58,10 +58,14 @@ $ yarn android
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [React Native](https://reactnative.dev)
+- [Expo](https://docs.expo.io)
 - [React Navigation](https://reactnavigation.org)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons#installation)
-- [react-native-video](https://github.com/react-native-video/react-native-video)
+- [AWS Amplify](https://docs.amplify.aws/start/q/integration/react-native)
+- [AWS Amplify Auth](https://docs.amplify.aws/start/getting-started/auth/q/integration/react-native)
+- [expo-av](https://docs.expo.io/versions/latest/sdk/video/)
+- [expo-camera](https://docs.expo.io/versions/latest/sdk/camera/)
+
 
 ---
 
